@@ -1,10 +1,9 @@
 {
-  "services": {
-    "frontend": { "root": "frontend", "framework": "vite" },
-    "backend":  { "root": "backend",  "framework": "go" }
-  },
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
-    { "source": "/api/(.*)", "destination": { "service": "backend" } },
-    { "source": "/(.*)",     "destination": { "service": "frontend" } }
+    {
+      "source": "/(.*)",
+      "destination": "https://vajiraai.vercel.app/$1"
+    }
   ]
 }
