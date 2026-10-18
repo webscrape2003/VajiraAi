@@ -1,53 +1,10 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
   "services": {
-    "backend": {
-      "root": "backend",
-      "runtime": "go"
-    },
-    "browser-extension": {
-      "root": "browser-extension",
-      "framework": "vite"
-    },
-    "desktop": {
-      "root": "desktop",
-      "runtime": "rust"
-    },
-    "ui-next": {
-      "root": "desktop/ui-next",
-      "framework": "vite"
-    },
-    "frontend": {
-      "root": "frontend",
-      "framework": "vite"
-    },
-    "admin": {
-      "root": "monkeyai/admin",
-      "framework": "vite"
-    },
-    "backend-2": {
-      "root": "monkeyai/backend",
-      "runtime": "go"
-    }
+    "frontend": { "root": "frontend", "framework": "vite" },
+    "backend":  { "root": "backend",  "framework": "go" }
   },
   "rewrites": [
-    {
-      "source": "/admin/(.*)",
-      "destination": {
-        "service": "admin"
-      }
-    },
-    {
-      "source": "/api/(.*)",
-      "destination": {
-        "service": "backend"
-      }
-    },
-    {
-      "source": "/(.*)",
-      "destination": {
-        "service": "frontend"
-      }
-    }
+    { "source": "/api/(.*)", "destination": { "service": "backend" } },
+    { "source": "/(.*)",     "destination": { "service": "frontend" } }
   ]
 }
