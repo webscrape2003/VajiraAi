@@ -4,6 +4,7 @@
   "version": "260323.0.5",
   "description": "MonkeyCode Web 前端",
   "author": "MonkeyCode",
+  "packageManager": "pnpm@10.34.7",
   "type": "module",
   "scripts": {
     "dev": "vite",
